@@ -28,15 +28,15 @@
 }
 
 @each $breackpoint, $name 
-  in (--xl-screen, --lg-screen, --md-screen, --sm-screen, --xs-screen),
-  (xl, lg, md, sm, xs) {
+  in (--xs-screen, --sm-screen, --md-screen, --lg-screen, --xl-screen),
+  (xs, sm, md, lg, xl) {
   @media ($breackpoint) {
     .col.$(name)-auto {
       flex: 1 1 auto;
       width: auto;
     }
 
-    @for $i from 1 to 12 {
+    @for $i from 1 to 24 {
       .col.$(name)-$i { --column: $i; }
     }  
   }

@@ -1,0 +1,64 @@
+@import "./variable.css";
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1200px;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+
+  [class*="col-"],
+  .col {
+    --column: var(--columns);
+    --fraction: calc(var(--column) / var(--columns));
+
+    flex: 0 0 auto;
+    width: calc(100% * var(--fraction) - var(--offset));
+    padding-left: var(--half-offset);
+    padding-right: var(--half-offset);
+  }
+
+  [class*="offset-"] {
+    --column-offset: 1;
+    --offset-fraction: calc(var(--column-offset) / var(--columns));
+
+    margin-left: calc(100% * var(--offset-fraction));
+  }
+
+  @for $i from 1 to 12 {
+    .col-$i {
+      --column: $i;
+    }
+
+    .offset-$i {
+      --column-offset-fraction: $i;
+    }
+  }
+
+
+  @each $breackpoint,
+  $name in (--xs-screen, --sm-screen, --md-screen, --lg-screen, --xl-screen),
+  (xs, sm, md, lg, xl) {
+
+    @media ($breackpoint) {
+      .col-$(name)-auto {
+        flex: 1 1 auto;
+        width: auto;
+      }
+
+      @for $i from 1 to 12 {
+        .col-$(name)-$(i) {
+          --column: $(i);
+        }
+
+        .offset-$(name)-$(i) {
+          --column-offset-fraction: $i;
+        }
+      }
+    }
+  }
+
+}

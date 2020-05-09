@@ -1,0 +1,56 @@
+@import "./variable.css";
+
+@each $prop-first, $alias-first in (padding, margin), (p, m) {
+  @each $prop-second, $alias-second in (top, bottom, left, right), (t, b, l, r)
+  {
+    @for $i from 1 to 4 {
+      .h-$(alias-first)$(alias-second)-$(i) {
+        $(prop-first)-$(prop-second): calc($(i) * var(--helper-offset));
+      }
+    }
+  }
+}
+
+@each $breackpoint,
+  $breackpoint-alias
+    in (--xs-screen, --sm-screen, --md-screen, --lg-screen, --xl-screen),
+  (xs, sm, md, lg, xl)
+{
+  @media ($breackpoint) {
+    @each $prop-first, $alias-first in (padding, margin), (p, m) {
+      @each $prop-second, $alias-second in (top, bottom, left, right),
+        (t, b, l, r)
+      {
+        @for $i from 1 to 4 {
+          .h-$(alias-first)$(alias-second)-$(breackpoint-alias)-$(i) {
+            $(prop-first)-$(prop-second): calc($(i) * var(--helper-offset));
+          }
+        }
+      }
+    }
+
+    .h-$(breackpoint-alias)-no-offset {
+      --half-offset: 0;
+    }
+
+    .h-$(breackpoint-alias)-rn-offset {
+      padding-left: 0;
+    }
+
+    .h-$(breackpoint-alias)-ln-offset {
+      padding-left: 0;
+    }
+  }
+}
+
+.h-no-offset {
+  --half-offset: 0;
+}
+
+.h-rn-offset {
+  padding-left: 0;
+}
+
+.h-ln-offset {
+  padding-left: 0;
+}

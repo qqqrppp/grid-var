@@ -1,11 +1,13 @@
 :root {
-    --columns: 12;
-    --offset: 1rem;
-    --half-offset: calc(var(--offset) / 2);
+  --columns: 12;
+  --offset: 1rem;
+  --half-offset: calc(var(--offset) / 2);
+  --container: 1200px;
+  --helper-offset: 1rem;
 }
 
-@custom-media --xl-screen (width >= 1200px);
-@custom-media --lg-screen (width >= 960px);
-@custom-media --md-screen (width >= 720px);
-@custom-media --sm-screen (width >= 540px);
-@custom-media --xs-screen (width <  540px);
+@custom-media --xl-screen (width >=1200px);
+@custom-media --lg-screen (width >=960px);
+@custom-media --md-screen (width >=720px);
+@custom-media --sm-screen (width >=540px);
+@custom-media --xs-screen (width > 320px);

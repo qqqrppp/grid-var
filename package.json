@@ -1,20 +1,27 @@
 {
-  "name": "crystalize",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "gvs",
+  "version": "1.1.0",
   "author": "jack praer ",
   "license": "MIT",
   "private": false,
-  "scripts": {
-    "grid": "postcss ./src/grid.css -o ./dist/grid.min.css -m",
-    "helpers": "postcss ./src/helpers.css -o ./dist/helpers.min.css -m",
-    "watch": "yarn build -w"
-  },
+  "style": "dist/gvs-columns.css",
+  "main": "dist/gvs-columns.css",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "css",
+    "postcss",
+    "functional css",
+    "responsive",
+    "grid",
+    "grid-system"
+  ],
   "devDependencies": {
     "browserlist": "^1.0.1",
-    "cssnano": "^4.1.7",
     "doiuse": "^4.2.0",
-    "postcss": "^7.0.7",
+    "postcss": "^7.0.29",
     "postcss-cli": "^6.1.0",
     "postcss-each": "^0.10.0",
     "postcss-import": "^12.0.1",
@@ -23,6 +30,13 @@
     "stylelint": "^9.9.0",
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-config-standard": "^18.2.0",
-    "stylelint-scss": "^3.4.3"
+    "stylelint-scss": "^3.17.2"
+  },
+  "dependencies": {},
+  "scripts": {
+    "gvs:system": "postcss src/gvs-system.css -o dist/gvs-system.css -m",
+    "gvs:columns": "postcss src/gvs-columns.css -o dist/gvs-columns.css -m",
+    "gvs:helpers": "postcss ./src/gvs-helpers.css -o ./dist/gvs-helpers.css -m",
+    "gvs": "postcss src/gvs.css -o dist/gvs.css -m"
   }
 }

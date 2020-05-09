@@ -1,0 +1,558 @@
+:root {
+  --columns: 12;
+  --offset: 1rem;
+  --half-offset: calc(var(--offset) / 2);
+  --container: 1200px;
+  --helper-offset: 1rem;
+}
+
+.col-1 {
+    --column: 1;
+  }
+
+.offset-1 {
+    --column-offset-fraction: 1;
+  }
+
+.col-2 {
+    --column: 2;
+  }
+
+.offset-2 {
+    --column-offset-fraction: 2;
+  }
+
+.col-3 {
+    --column: 3;
+  }
+
+.offset-3 {
+    --column-offset-fraction: 3;
+  }
+
+.col-4 {
+    --column: 4;
+  }
+
+.offset-4 {
+    --column-offset-fraction: 4;
+  }
+
+.col-5 {
+    --column: 5;
+  }
+
+.offset-5 {
+    --column-offset-fraction: 5;
+  }
+
+.col-6 {
+    --column: 6;
+  }
+
+.offset-6 {
+    --column-offset-fraction: 6;
+  }
+
+.col-7 {
+    --column: 7;
+  }
+
+.offset-7 {
+    --column-offset-fraction: 7;
+  }
+
+.col-8 {
+    --column: 8;
+  }
+
+.offset-8 {
+    --column-offset-fraction: 8;
+  }
+
+.col-9 {
+    --column: 9;
+  }
+
+.offset-9 {
+    --column-offset-fraction: 9;
+  }
+
+.col-10 {
+    --column: 10;
+  }
+
+.offset-10 {
+    --column-offset-fraction: 10;
+  }
+
+.col-11 {
+    --column: 11;
+  }
+
+.offset-11 {
+    --column-offset-fraction: 11;
+  }
+
+.col-12 {
+    --column: 12;
+  }
+
+.offset-12 {
+    --column-offset-fraction: 12;
+  }
+
+@media (min-width: 321px) {
+    .col-xs-auto {
+      flex: 1 1 auto;
+      width: auto;
+    }
+      .col-xs-1 {
+        --column: 1;
+      }
+
+      .offset-xs-1 {
+        --column-offset-fraction: 1;
+      }
+      .col-xs-2 {
+        --column: 2;
+      }
+
+      .offset-xs-2 {
+        --column-offset-fraction: 2;
+      }
+      .col-xs-3 {
+        --column: 3;
+      }
+
+      .offset-xs-3 {
+        --column-offset-fraction: 3;
+      }
+      .col-xs-4 {
+        --column: 4;
+      }
+
+      .offset-xs-4 {
+        --column-offset-fraction: 4;
+      }
+      .col-xs-5 {
+        --column: 5;
+      }
+
+      .offset-xs-5 {
+        --column-offset-fraction: 5;
+      }
+      .col-xs-6 {
+        --column: 6;
+      }
+
+      .offset-xs-6 {
+        --column-offset-fraction: 6;
+      }
+      .col-xs-7 {
+        --column: 7;
+      }
+
+      .offset-xs-7 {
+        --column-offset-fraction: 7;
+      }
+      .col-xs-8 {
+        --column: 8;
+      }
+
+      .offset-xs-8 {
+        --column-offset-fraction: 8;
+      }
+      .col-xs-9 {
+        --column: 9;
+      }
+
+      .offset-xs-9 {
+        --column-offset-fraction: 9;
+      }
+      .col-xs-10 {
+        --column: 10;
+      }
+
+      .offset-xs-10 {
+        --column-offset-fraction: 10;
+      }
+      .col-xs-11 {
+        --column: 11;
+      }
+
+      .offset-xs-11 {
+        --column-offset-fraction: 11;
+      }
+      .col-xs-12 {
+        --column: 12;
+      }
+
+      .offset-xs-12 {
+        --column-offset-fraction: 12;
+      }
+  }
+
+@media (min-width: 540px) {
+    .col-sm-auto {
+      flex: 1 1 auto;
+      width: auto;
+    }
+      .col-sm-1 {
+        --column: 1;
+      }
+
+      .offset-sm-1 {
+        --column-offset-fraction: 1;
+      }
+      .col-sm-2 {
+        --column: 2;
+      }
+
+      .offset-sm-2 {
+        --column-offset-fraction: 2;
+      }
+      .col-sm-3 {
+        --column: 3;
+      }
+
+      .offset-sm-3 {
+        --column-offset-fraction: 3;
+      }
+      .col-sm-4 {
+        --column: 4;
+      }
+
+      .offset-sm-4 {
+        --column-offset-fraction: 4;
+      }
+      .col-sm-5 {
+        --column: 5;
+      }
+
+      .offset-sm-5 {
+        --column-offset-fraction: 5;
+      }
+      .col-sm-6 {
+        --column: 6;
+      }
+
+      .offset-sm-6 {
+        --column-offset-fraction: 6;
+      }
+      .col-sm-7 {
+        --column: 7;
+      }
+
+      .offset-sm-7 {
+        --column-offset-fraction: 7;
+      }
+      .col-sm-8 {
+        --column: 8;
+      }
+
+      .offset-sm-8 {
+        --column-offset-fraction: 8;
+      }
+      .col-sm-9 {
+        --column: 9;
+      }
+
+      .offset-sm-9 {
+        --column-offset-fraction: 9;
+      }
+      .col-sm-10 {
+        --column: 10;
+      }
+
+      .offset-sm-10 {
+        --column-offset-fraction: 10;
+      }
+      .col-sm-11 {
+        --column: 11;
+      }
+
+      .offset-sm-11 {
+        --column-offset-fraction: 11;
+      }
+      .col-sm-12 {
+        --column: 12;
+      }
+
+      .offset-sm-12 {
+        --column-offset-fraction: 12;
+      }
+  }
+
+@media (min-width: 720px) {
+    .col-md-auto {
+      flex: 1 1 auto;
+      width: auto;
+    }
+      .col-md-1 {
+        --column: 1;
+      }
+
+      .offset-md-1 {
+        --column-offset-fraction: 1;
+      }
+      .col-md-2 {
+        --column: 2;
+      }
+
+      .offset-md-2 {
+        --column-offset-fraction: 2;
+      }
+      .col-md-3 {
+        --column: 3;
+      }
+
+      .offset-md-3 {
+        --column-offset-fraction: 3;
+      }
+      .col-md-4 {
+        --column: 4;
+      }
+
+      .offset-md-4 {
+        --column-offset-fraction: 4;
+      }
+      .col-md-5 {
+        --column: 5;
+      }
+
+      .offset-md-5 {
+        --column-offset-fraction: 5;
+      }
+      .col-md-6 {
+        --column: 6;
+      }
+
+      .offset-md-6 {
+        --column-offset-fraction: 6;
+      }
+      .col-md-7 {
+        --column: 7;
+      }
+
+      .offset-md-7 {
+        --column-offset-fraction: 7;
+      }
+      .col-md-8 {
+        --column: 8;
+      }
+
+      .offset-md-8 {
+        --column-offset-fraction: 8;
+      }
+      .col-md-9 {
+        --column: 9;
+      }
+
+      .offset-md-9 {
+        --column-offset-fraction: 9;
+      }
+      .col-md-10 {
+        --column: 10;
+      }
+
+      .offset-md-10 {
+        --column-offset-fraction: 10;
+      }
+      .col-md-11 {
+        --column: 11;
+      }
+
+      .offset-md-11 {
+        --column-offset-fraction: 11;
+      }
+      .col-md-12 {
+        --column: 12;
+      }
+
+      .offset-md-12 {
+        --column-offset-fraction: 12;
+      }
+  }
+
+@media (min-width: 960px) {
+    .col-lg-auto {
+      flex: 1 1 auto;
+      width: auto;
+    }
+      .col-lg-1 {
+        --column: 1;
+      }
+
+      .offset-lg-1 {
+        --column-offset-fraction: 1;
+      }
+      .col-lg-2 {
+        --column: 2;
+      }
+
+      .offset-lg-2 {
+        --column-offset-fraction: 2;
+      }
+      .col-lg-3 {
+        --column: 3;
+      }
+
+      .offset-lg-3 {
+        --column-offset-fraction: 3;
+      }
+      .col-lg-4 {
+        --column: 4;
+      }
+
+      .offset-lg-4 {
+        --column-offset-fraction: 4;
+      }
+      .col-lg-5 {
+        --column: 5;
+      }
+
+      .offset-lg-5 {
+        --column-offset-fraction: 5;
+      }
+      .col-lg-6 {
+        --column: 6;
+      }
+
+      .offset-lg-6 {
+        --column-offset-fraction: 6;
+      }
+      .col-lg-7 {
+        --column: 7;
+      }
+
+      .offset-lg-7 {
+        --column-offset-fraction: 7;
+      }
+      .col-lg-8 {
+        --column: 8;
+      }
+
+      .offset-lg-8 {
+        --column-offset-fraction: 8;
+      }
+      .col-lg-9 {
+        --column: 9;
+      }
+
+      .offset-lg-9 {
+        --column-offset-fraction: 9;
+      }
+      .col-lg-10 {
+        --column: 10;
+      }
+
+      .offset-lg-10 {
+        --column-offset-fraction: 10;
+      }
+      .col-lg-11 {
+        --column: 11;
+      }
+
+      .offset-lg-11 {
+        --column-offset-fraction: 11;
+      }
+      .col-lg-12 {
+        --column: 12;
+      }
+
+      .offset-lg-12 {
+        --column-offset-fraction: 12;
+      }
+  }
+
+@media (min-width: 1200px) {
+    .col-xl-auto {
+      flex: 1 1 auto;
+      width: auto;
+    }
+      .col-xl-1 {
+        --column: 1;
+      }
+
+      .offset-xl-1 {
+        --column-offset-fraction: 1;
+      }
+      .col-xl-2 {
+        --column: 2;
+      }
+
+      .offset-xl-2 {
+        --column-offset-fraction: 2;
+      }
+      .col-xl-3 {
+        --column: 3;
+      }
+
+      .offset-xl-3 {
+        --column-offset-fraction: 3;
+      }
+      .col-xl-4 {
+        --column: 4;
+      }
+
+      .offset-xl-4 {
+        --column-offset-fraction: 4;
+      }
+      .col-xl-5 {
+        --column: 5;
+      }
+
+      .offset-xl-5 {
+        --column-offset-fraction: 5;
+      }
+      .col-xl-6 {
+        --column: 6;
+      }
+
+      .offset-xl-6 {
+        --column-offset-fraction: 6;
+      }
+      .col-xl-7 {
+        --column: 7;
+      }
+
+      .offset-xl-7 {
+        --column-offset-fraction: 7;
+      }
+      .col-xl-8 {
+        --column: 8;
+      }
+
+      .offset-xl-8 {
+        --column-offset-fraction: 8;
+      }
+      .col-xl-9 {
+        --column: 9;
+      }
+
+      .offset-xl-9 {
+        --column-offset-fraction: 9;
+      }
+      .col-xl-10 {
+        --column: 10;
+      }
+
+      .offset-xl-10 {
+        --column-offset-fraction: 10;
+      }
+      .col-xl-11 {
+        --column: 11;
+      }
+
+      .offset-xl-11 {
+        --column-offset-fraction: 11;
+      }
+      .col-xl-12 {
+        --column: 12;
+      }
+
+      .offset-xl-12 {
+        --column-offset-fraction: 12;
+      }
+  }

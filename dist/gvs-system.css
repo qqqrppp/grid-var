@@ -1,0 +1,40 @@
+:root {
+  --columns: 12;
+  --offset: 1rem;
+  --half-offset: calc(var(--offset) / 2);
+  --container: 1200px;
+  --helper-offset: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: var(--container);
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+[class*="col-"],
+.col {
+  --column: var(--columns);
+  --fraction: calc(var(--column) / var(--columns));
+
+  flex: 0 0 auto;
+  width: calc(100% * var(--fraction));
+  padding-left: var(--half-offset);
+  padding-right: var(--half-offset);
+}
+
+[class*="offset-"] {
+  --column-offset: 1;
+  --offset-fraction: calc(var(--column-offset) / var(--columns));
+
+  margin-left: calc(100% * var(--offset-fraction));
+}

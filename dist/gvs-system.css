@@ -32,7 +32,8 @@
   padding-right: var(--half-offset);
 }
 
-[class*="offset-"] {
+[class*="offset-"], 
+.offset {
   --column-offset: 1;
   --offset-fraction: calc(var(--column-offset) / var(--columns));
 

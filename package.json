@@ -20,7 +20,7 @@
   ],
   "devDependencies": {
     "browserlist": "^1.0.1",
-    "postcss": "^7.0.29",
+    "postcss": "^7.0.36",
     "postcss-cli": "^6.1.0",
     "postcss-each": "^0.10.0",
     "postcss-import": "^12.0.1",
